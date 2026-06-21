@@ -1,13 +1,14 @@
 import { auth } from "@/auth";
 import { redirect } from "next/navigation";
 import Link from "next/link";
-import { LayoutDashboard, Package, ShoppingCart, Truck } from "lucide-react";
+import { LayoutDashboard, Package, ShoppingCart, Truck, RefreshCw } from "lucide-react";
 
 const NAV = [
   { href: "/admin/dashboard", label: "Dashboard", icon: LayoutDashboard },
   { href: "/admin/products", label: "Productos", icon: Package },
   { href: "/admin/orders", label: "Pedidos", icon: ShoppingCart },
   { href: "/admin/suppliers", label: "Proveedores", icon: Truck },
+  { href: "/admin/sync", label: "Sync BigBuy", icon: RefreshCw },
 ];
 
 export default async function AdminLayout({ children }: { children: React.ReactNode }) {
