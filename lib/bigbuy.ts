@@ -156,7 +156,7 @@ export async function fetchAllStock(): Promise<BBProductStock[]> {
   const results: BBProductStock[] = [];
   for (let page = 1; page <= 200; page++) {
     const data = await bbFetch<BBProductStock[]>(
-      `/catalog/productsstockavailable.json?isoCode=ES&pageSize=${PAGE_SIZE}&page=${page}`
+      `/catalog/productsstockavailable.json?pageSize=${PAGE_SIZE}&page=${page}`
     );
     if (!Array.isArray(data) || data.length === 0) break;
     results.push(...data);
