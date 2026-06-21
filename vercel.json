@@ -2,11 +2,11 @@
   "crons": [
     {
       "path": "/api/sync/bigbuy",
-      "schedule": "0 */6 * * *"
+      "schedule": "0 6 * * *"
     },
     {
       "path": "/api/sync/dietisur",
-      "schedule": "0 * * * *"
+      "schedule": "0 7 * * *"
     }
   ],
   "headers": [
