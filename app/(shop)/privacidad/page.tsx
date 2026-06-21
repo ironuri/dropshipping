@@ -11,7 +11,7 @@ export default function PrivacyPage() {
       <p className="text-muted-foreground text-sm">Última actualización: {new Date().toLocaleDateString("es-ES")}</p>
 
       <h2>1. Responsable del tratamiento</h2>
-      <p>EcoSolar Cosmetics S.L. (en adelante, "la empresa"), con CIF B-XXXXXXXX, domicilio en [DIRECCIÓN], es el responsable del tratamiento de sus datos personales, de conformidad con el Reglamento (UE) 2016/679 (RGPD) y la Ley Orgánica 3/2018 (LOPDGDD).</p>
+      <p>EcoSolar Cosmetics S.L. (en adelante, &quot;la empresa&quot;), con CIF B-XXXXXXXX, domicilio en [DIRECCIÓN], es el responsable del tratamiento de sus datos personales, de conformidad con el Reglamento (UE) 2016/679 (RGPD) y la Ley Orgánica 3/2018 (LOPDGDD).</p>
 
       <h2>2. Datos que recogemos</h2>
       <ul>

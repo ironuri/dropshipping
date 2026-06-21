@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { stripe, toStripeAmount, STRIPE_CURRENCY } from "@/lib/stripe";
 import { db } from "@/lib/db";
-import { generateOrderNumber, parseDecimal } from "@/lib/utils";
+import { parseDecimal } from "@/lib/utils";
 import { z } from "zod";
 
 const schema = z.object({
