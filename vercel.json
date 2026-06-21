@@ -1,0 +1,23 @@
+{
+  "crons": [
+    {
+      "path": "/api/sync/bigbuy",
+      "schedule": "0 */6 * * *"
+    },
+    {
+      "path": "/api/sync/dietisur",
+      "schedule": "0 * * * *"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-store"
+        }
+      ]
+    }
+  ]
+}
