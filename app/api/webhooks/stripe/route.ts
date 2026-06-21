@@ -156,9 +156,9 @@ async function handleCheckoutCompleted(session: Stripe.Checkout.Session) {
       const { Resend } = await import("resend");
       const resend = new Resend(process.env.RESEND_API_KEY);
       await resend.emails.send({
-        from: `${process.env.RESEND_FROM_NAME || "EcoSolar"} <${process.env.RESEND_FROM_EMAIL}>`,
+        from: `${process.env.RESEND_FROM_NAME || "Feliu Cosmetics"} <${process.env.RESEND_FROM_EMAIL}>`,
         to: orderData.email,
-        subject: `Confirmación de pedido ${orderNumber} — EcoSolar Cosmetics`,
+        subject: `Confirmación de pedido ${orderNumber} — Feliu Cosmetics`,
         html: `
           <h1>¡Gracias por tu pedido!</h1>
           <p>Hola ${orderData.name},</p>
@@ -166,7 +166,7 @@ async function handleCheckoutCompleted(session: Stripe.Checkout.Session) {
           <p>Te avisaremos cuando sea enviado.</p>
           <p>Total: <strong>€${orderData.total.toFixed(2)}</strong></p>
           <hr>
-          <p>EcoSolar Cosmetics</p>
+          <p>Feliu Cosmetics</p>
         `,
       });
     } catch (emailErr) {

@@ -5,7 +5,7 @@ import { ProductCatalog } from "./ProductCatalog";
 import type { Product } from "@/types";
 
 export const metadata: Metadata = {
-  title: "Todos los productos | EcoSolar Cosmetics",
+  title: "Todos los productos | Feliu Cosmetics",
   description: "Catálogo completo de protección solar de farmacia y cosméticos naturales. Filtra por marca, SPF, certificación eco y precio.",
 };
 

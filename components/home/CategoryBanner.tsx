@@ -2,28 +2,28 @@ import Link from "next/link";
 
 const CATEGORIES = [
   {
-    href: "/productos/solares",
+    href: "/categorias/solares",
     emoji: "☀️",
     title: "Protección Solar",
     description: "ISDIN, Heliocare, La Roche-Posay",
     bg: "bg-amber-50 hover:bg-amber-100",
   },
   {
-    href: "/productos/eco",
+    href: "/categorias/eco",
     emoji: "🌿",
     title: "Eco & Natural",
     description: "Biosolis, Florame, Dr. Hauschka",
     bg: "bg-green-50 hover:bg-green-100",
   },
   {
-    href: "/productos/skincare",
+    href: "/categorias/skincare",
     emoji: "✨",
     title: "Skincare Premium",
     description: "Vitamina C, Niacinamida, Ácido Hialurónico",
     bg: "bg-purple-50 hover:bg-purple-100",
   },
   {
-    href: "/productos/kits",
+    href: "/categorias/kits",
     emoji: "🎁",
     title: "Kits & Bundles",
     description: "Rutinas completas con descuento",

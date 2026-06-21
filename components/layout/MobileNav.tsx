@@ -14,7 +14,7 @@ export function MobileNav({ open, onClose, navLinks }: Props) {
     <Sheet open={open} onOpenChange={(o) => !o && onClose()}>
       <SheetContent side="left" className="w-72">
         <SheetHeader>
-          <SheetTitle className="text-[#2D5016] text-xl">🌿 EcoSolar</SheetTitle>
+          <SheetTitle className="text-[#2D5016] text-xl">🌿 Feliu Cosmetics</SheetTitle>
         </SheetHeader>
         <nav className="mt-6 flex flex-col gap-1">
           {navLinks.map((link) => (

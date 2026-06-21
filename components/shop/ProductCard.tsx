@@ -9,6 +9,7 @@ import { useWishlist } from "@/hooks/useWishlist";
 import { formatPrice, getSpfBadgeLabel, parseDecimal } from "@/lib/utils";
 import type { Product } from "@/types";
 import { cn } from "@/lib/utils";
+import { useState } from "react";
 
 interface Props {
   product: Product;
@@ -19,6 +20,7 @@ export function ProductCard({ product }: Props) {
   const toggle = useWishlist((s) => s.toggle);
   const isWishlisted = useWishlist((s) => s.isWishlisted);
   const wishlisted = isWishlisted(product.id);
+  const [imgError, setImgError] = useState(false);
 
   const price = parseDecimal(product.retailPrice);
   const compareAt = product.compareAtPrice ? parseDecimal(product.compareAtPrice) : null;
@@ -31,13 +33,14 @@ export function ProductCard({ product }: Props) {
     <article className="group relative bg-white rounded-lg border border-[#E8E4DC] hover:shadow-md transition-shadow duration-300 flex flex-col overflow-hidden">
       {/* Image */}
       <Link href={`/productos/${product.slug}`} className="relative aspect-square bg-[#FAFAF8] overflow-hidden">
-        {image ? (
+        {image && !imgError ? (
           <Image
             src={image.url}
             alt={image.altEs}
             fill
             sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
             className="object-contain p-4 group-hover:scale-105 transition-transform duration-300"
+            onError={() => setImgError(true)}
           />
         ) : (
           <div className="w-full h-full flex items-center justify-center text-4xl text-muted-foreground">

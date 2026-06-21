@@ -4,7 +4,7 @@ import { Suspense } from "react";
 import { LoginForm } from "./LoginForm";
 
 export const metadata: Metadata = {
-  title: "Iniciar sesión | EcoSolar Cosmetics",
+  title: "Iniciar sesión | Feliu Cosmetics Cosmetics",
 };
 
 export default function LoginPage() {
@@ -12,7 +12,7 @@ export default function LoginPage() {
     <div className="min-h-screen bg-[#FAFAF8] flex items-center justify-center py-12 px-4">
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
-          <Link href="/" className="text-2xl font-bold text-[#2D5016]">🌿 EcoSolar</Link>
+          <Link href="/" className="text-2xl font-bold text-[#2D5016]">🌿 Feliu Cosmetics</Link>
           <h1 className="text-2xl font-bold mt-6 mb-2">Bienvenida de nuevo</h1>
           <p className="text-muted-foreground">Inicia sesión en tu cuenta</p>
         </div>

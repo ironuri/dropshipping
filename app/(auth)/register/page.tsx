@@ -3,7 +3,7 @@ import Link from "next/link";
 import { RegisterForm } from "./RegisterForm";
 
 export const metadata: Metadata = {
-  title: "Crear cuenta | EcoSolar Cosmetics",
+  title: "Crear cuenta | Feliu Cosmetics Cosmetics",
 };
 
 export default function RegisterPage() {
@@ -11,7 +11,7 @@ export default function RegisterPage() {
     <div className="min-h-screen bg-[#FAFAF8] flex items-center justify-center py-12 px-4">
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
-          <Link href="/" className="text-2xl font-bold text-[#2D5016]">🌿 EcoSolar</Link>
+          <Link href="/" className="text-2xl font-bold text-[#2D5016]">🌿 Feliu Cosmetics</Link>
           <h1 className="text-2xl font-bold mt-6 mb-2">Crea tu cuenta</h1>
           <p className="text-muted-foreground">Únete y empieza a disfrutar</p>
         </div>

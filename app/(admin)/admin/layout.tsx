@@ -22,7 +22,7 @@ export default async function AdminLayout({ children }: { children: React.ReactN
       <aside className="w-64 bg-white border-r border-[#E8E4DC] shrink-0">
         <div className="p-6 border-b border-[#E8E4DC]">
           <Link href="/" className="text-lg font-bold text-[#2D5016]">
-            🌿 EcoSolar Admin
+            🌿 Feliu Admin
           </Link>
         </div>
         <nav className="p-4 space-y-1">

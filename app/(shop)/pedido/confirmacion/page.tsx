@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { stripe } from "@/lib/stripe";
 
 export const metadata: Metadata = {
-  title: "Pedido confirmado | EcoSolar Cosmetics",
+  title: "Pedido confirmado | Feliu Cosmetics",
 };
 
 export default async function OrderConfirmationPage({

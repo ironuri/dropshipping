@@ -19,10 +19,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!product) return { title: "Producto no encontrado" };
 
   return {
-    title: `${product.nameEs} | ${product.brand || "EcoSolar"}`,
+    title: `${product.nameEs} | ${product.brand || "Feliu Cosmetics"}`,
     description: truncate(product.descriptionEs, 155),
     openGraph: {
-      title: `${product.nameEs} | EcoSolar Cosmetics`,
+      title: `${product.nameEs} | Feliu Cosmetics`,
       description: truncate(product.descriptionEs, 155),
       images: product.images[0] ? [{ url: product.images[0].url }] : [],
     },
@@ -88,7 +88,7 @@ export default async function ProductDetailPage({ params }: Props) {
       priceCurrency: "EUR",
       price: product.retailPrice.toFixed(2),
       availability: product.stock > 0 ? "https://schema.org/InStock" : "https://schema.org/OutOfStock",
-      seller: { "@type": "Organization", name: "EcoSolar Cosmetics" },
+      seller: { "@type": "Organization", name: "Feliu Cosmetics" },
     },
   };
 

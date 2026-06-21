@@ -8,7 +8,7 @@ import { Suspense } from "react";
 import { ProductGrid } from "@/components/shop/ProductGrid";
 
 export const metadata: Metadata = {
-  title: "EcoSolar Cosmetics | Solares y Cosmética Natural Premium",
+  title: "Feliu Cosmetics | Solares y Cosmética Natural Premium",
   description:
     "Tienda online de protección solar de farmacia y cosméticos naturales eco-certificados. ISDIN, Heliocare, La Roche-Posay, Biosolis. Envío gratis +35€.",
 };

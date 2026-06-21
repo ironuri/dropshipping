@@ -10,8 +10,8 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"),
   title: {
-    default: "EcoSolar Cosmetics | Solares y Cosmética Natural",
-    template: "%s | EcoSolar Cosmetics",
+    default: "Feliu Cosmetics | Solares y Cosmética Natural",
+    template: "%s | Feliu Cosmetics",
   },
   description:
     "Tienda online de cosmética solar y natural. Marcas premium: ISDIN, Heliocare, La Roche-Posay, Biosolis, Florame. Envío gratis en pedidos +35€.",
@@ -27,11 +27,11 @@ export const metadata: Metadata = {
     "vitamina C",
     "niacinamida",
   ],
-  authors: [{ name: "EcoSolar Cosmetics" }],
+  authors: [{ name: "Feliu Cosmetics" }],
   openGraph: {
     type: "website",
     locale: "es_ES",
-    siteName: "EcoSolar Cosmetics",
+    siteName: "Feliu Cosmetics",
   },
   twitter: {
     card: "summary_large_image",

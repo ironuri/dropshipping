@@ -7,7 +7,7 @@ import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import { User, Package, Heart, MapPin, Settings } from "lucide-react";
 
-export const metadata: Metadata = { title: "Mi cuenta | EcoSolar Cosmetics" };
+export const metadata: Metadata = { title: "Mi cuenta | Feliu Cosmetics" };
 export const dynamic = "force-dynamic";
 
 export default async function AccountPage() {

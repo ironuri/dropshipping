@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Política de Privacidad | EcoSolar Cosmetics",
+  title: "Política de Privacidad | Feliu Cosmetics",
 };
 
 export default function PrivacyPage() {
@@ -11,7 +11,7 @@ export default function PrivacyPage() {
       <p className="text-muted-foreground text-sm">Última actualización: {new Date().toLocaleDateString("es-ES")}</p>
 
       <h2>1. Responsable del tratamiento</h2>
-      <p>EcoSolar Cosmetics S.L. (en adelante, &quot;la empresa&quot;), con CIF B-XXXXXXXX, domicilio en [DIRECCIÓN], es el responsable del tratamiento de sus datos personales, de conformidad con el Reglamento (UE) 2016/679 (RGPD) y la Ley Orgánica 3/2018 (LOPDGDD).</p>
+      <p>Feliu Cosmetics S.L. (en adelante, &quot;la empresa&quot;), con CIF [CIF DE TU EMPRESA], domicilio en [DIRECCIÓN COMPLETA], es el responsable del tratamiento de sus datos personales, de conformidad con el Reglamento (UE) 2016/679 (RGPD) y la Ley Orgánica 3/2018 (LOPDGDD).</p>
 
       <h2>2. Datos que recogemos</h2>
       <ul>
@@ -36,13 +36,13 @@ export default function PrivacyPage() {
       <p>Los datos se conservarán durante el tiempo necesario para cumplir con la finalidad, y en todo caso durante el plazo de prescripción legal aplicable (mínimo 6 años para datos contables).</p>
 
       <h2>6. Sus derechos</h2>
-      <p>Puede ejercer sus derechos de acceso, rectificación, supresión, portabilidad, limitación y oposición enviando un email a <a href="mailto:privacidad@ecosolar.es">privacidad@ecosolar.es</a>. También puede reclamar ante la AEPD (www.aepd.es).</p>
+      <p>Puede ejercer sus derechos de acceso, rectificación, supresión, portabilidad, limitación y oposición enviando un email a <a href="mailto:privacidad@feliucosmetics.es">privacidad@feliucosmetics.es</a>. También puede reclamar ante la AEPD (www.aepd.es).</p>
 
       <h2>7. Cookies</h2>
       <p>Consulte nuestra <a href="/cookies">política de cookies</a> para información detallada.</p>
 
       <h2>8. Transferencias internacionales</h2>
-      <p>Sus datos pueden ser tratados por prestadores de servicios en países terceros (Stripe, Google, etc.) que ofrecen garantías adecuadas de protección.</p>
+      <p>Sus datos pueden ser tratados por prestadores de servicios en países terceros (Stripe, Google, etc.) que ofrecen garantías adecuadas de protección mediante las cláusulas contractuales estándar aprobadas por la Comisión Europea.</p>
     </div>
   );
 }

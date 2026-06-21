@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const cat = await db.category.findUnique({ where: { slug: category } });
   if (!cat) return { title: "Categoría no encontrada" };
   return {
-    title: `${cat.nameEs} | EcoSolar Cosmetics`,
+    title: `${cat.nameEs} | Feliu Cosmetics`,
     description: `Productos de ${cat.nameEs}. Marcas premium y eco-certificadas. Envío gratis en pedidos +35€.`,
   };
 }

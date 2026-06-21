@@ -12,10 +12,10 @@ const TRUST_BADGES = [
 const FOOTER_LINKS = {
   tienda: [
     { href: "/productos", label: "Todos los productos" },
-    { href: "/productos/solares", label: "Protección solar" },
-    { href: "/productos/skincare", label: "Skincare" },
-    { href: "/productos/eco", label: "Eco & Natural" },
-    { href: "/productos/kits", label: "Kits y bundles" },
+    { href: "/categorias/solares", label: "Protección solar" },
+    { href: "/categorias/skincare", label: "Skincare" },
+    { href: "/categorias/eco", label: "Eco & Natural" },
+    { href: "/categorias/kits", label: "Kits y bundles" },
   ],
   ayuda: [
     { href: "/envios", label: "Envíos y entregas" },
@@ -50,7 +50,7 @@ export function Footer() {
       {/* Links */}
       <div className="container py-12 grid grid-cols-2 md:grid-cols-4 gap-8">
         <div>
-          <p className="text-xl font-bold text-[#2D5016] mb-4">🌿 EcoSolar Cosmetics</p>
+          <p className="text-xl font-bold text-[#2D5016] mb-4">🌿 Feliu Cosmetics</p>
           <p className="text-sm text-[#6B6B6B] leading-relaxed">
             Expertos en cosmética solar de farmacia y productos naturales para el cuidado de la piel.
           </p>
@@ -101,7 +101,7 @@ export function Footer() {
 
       <Separator className="bg-[#E8E4DC]" />
       <div className="container py-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#6B6B6B]">
-        <p>© {new Date().getFullYear()} EcoSolar Cosmetics S.L. · CIF: B-XXXXXXXX · Todos los derechos reservados</p>
+        <p>© {new Date().getFullYear()} Feliu Cosmetics S.L. · CIF: B-XXXXXXXX · Todos los derechos reservados</p>
         <div className="flex items-center gap-4">
           <span>💳 Visa · Mastercard · Bizum</span>
           <span>🔒 SSL Seguro</span>

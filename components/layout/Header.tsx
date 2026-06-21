@@ -10,10 +10,10 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 
 const NAV_LINKS = [
-  { href: "/productos/solares", label: "Solares" },
-  { href: "/productos/skincare", label: "Skincare" },
-  { href: "/productos/eco", label: "Eco & Bio" },
-  { href: "/productos/kits", label: "Kits & Bundles" },
+  { href: "/categorias/solares", label: "Solares" },
+  { href: "/categorias/skincare", label: "Skincare" },
+  { href: "/categorias/eco", label: "Eco & Bio" },
+  { href: "/categorias/kits", label: "Kits & Bundles" },
 ];
 
 export function Header() {
@@ -30,7 +30,7 @@ export function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 font-bold text-xl text-[#2D5016] shrink-0">
             <span className="text-2xl">🌿</span>
-            <span className="hidden sm:block">EcoSolar</span>
+            <span className="hidden sm:block">Feliu</span>
           </Link>
 
           {/* Desktop Nav */}

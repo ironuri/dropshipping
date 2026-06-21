@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Términos y Condiciones | EcoSolar Cosmetics",
+  title: "Términos y Condiciones | Feliu Cosmetics",
 };
 
 export default function TermsPage() {
@@ -11,7 +11,7 @@ export default function TermsPage() {
       <p className="text-muted-foreground text-sm">Última actualización: {new Date().toLocaleDateString("es-ES")}</p>
 
       <h2>1. Identificación</h2>
-      <p>EcoSolar Cosmetics S.L., CIF B-XXXXXXXX, inscrita en el Registro Mercantil de [CIUDAD], Tomo X, Folio X. Email: info@ecosolar.es</p>
+      <p>Feliu Cosmetics S.L., CIF [CIF DE TU EMPRESA], inscrita en el Registro Mercantil de [CIUDAD]. Email: info@feliucosmetics.es</p>
 
       <h2>2. Objeto</h2>
       <p>Estas condiciones regulan la compra de productos de cosmética solar y skincare a través de este sitio web, de conformidad con la Ley 34/2002 (LSSI) y el Real Decreto Legislativo 1/2007 (TRLGDCU).</p>
@@ -27,7 +27,7 @@ export default function TermsPage() {
       </ul>
 
       <h2>5. Derecho de desistimiento</h2>
-      <p>Dispone de 30 días desde la recepción para devolver cualquier producto sin indicar motivo, según el artículo 102 del TRLGDCU. Los gastos de devolución corren a cargo de EcoSolar Cosmetics para pedidos dentro de España.</p>
+      <p>Dispone de 30 días desde la recepción para devolver cualquier producto sin indicar motivo, según el artículo 102 del TRLGDCU. Los gastos de devolución corren a cargo de Feliu Cosmetics para pedidos dentro de España.</p>
 
       <h2>6. Garantías</h2>
       <p>Todos los productos son originales, procedentes de distribuidores oficiales autorizados. Cumplen con el Reglamento (CE) 1223/2009 sobre productos cosméticos.</p>
