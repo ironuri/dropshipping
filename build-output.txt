@@ -1,0 +1,63 @@
+﻿node.exe : $ next build
+En C:\Users\Usuario\AppData\Roaming\npm\pnpm.ps1: 24 Carácter: 5
++     & "node$exe"  "$basedir/node_modules/pnpm/bin/pnpm.mjs" $args
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ($ next build:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+   ▲ Next.js 15.3.3
+   - Environments: .env.local, .env
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully in 6.0s
+   Linting and checking validity of types ...
+   Collecting page data ...
+   Generating static pages (0/21) ...
+   Generating static pages (5/21) 
+   Generating static pages (10/21) 
+   Generating static pages (15/21) 
+ReferenceError: location is not defined
+    at b (C:\Users\Usuario\Dropshipping\cosmetics-store\.next\server\app\(shop)\checkout\page.js:1:9691)
+ ✓ Generating static pages (21/21)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                                 Size  First Load JS  Revalidate  Expire
+┌ ○ /                                    1.57 kB         125 kB
+├ ○ /_not-found                            975 B         102 kB
+├ ƒ /account                               191 B         105 kB
+├ ƒ /admin/dashboard                       180 B         102 kB
+├ ƒ /admin/orders                          180 B         102 kB
+├ ƒ /admin/products                        191 B         105 kB
+├ ƒ /admin/suppliers                       191 B         105 kB
+├ ƒ /api/auth/[...nextauth]                180 B         102 kB
+├ ƒ /api/checkout                          180 B         102 kB
+├ ƒ /api/newsletter                        180 B         102 kB
+├ ƒ /api/products/search                   180 B         102 kB
+├ ƒ /api/register                          180 B         102 kB
+├ ƒ /api/sync/bigbuy                       180 B         102 kB
+├ ƒ /api/sync/dietisur                     180 B         102 kB
+├ ƒ /api/webhooks/stripe                   180 B         102 kB
+├ ○ /cart                                4.52 kB         124 kB
+├ ƒ /categories/[category]                 443 B         124 kB
+├ ○ /checkout                               6 kB         151 kB
+├ ○ /login                               5.96 kB         119 kB
+├ ƒ /pedido/confirmacion                   191 B         105 kB
+├ ○ /privacidad                            180 B         102 kB
+├ ƒ /products                            10.8 kB         162 kB
+├ ƒ /products/[slug]                     2.77 kB         126 kB
+├ ○ /register                            3.61 kB         117 kB
+├ ○ /robots.txt                            180 B         102 kB
+├ ○ /sitemap.xml                           180 B         102 kB          1h      1y
+└ ○ /terminos                              180 B         102 kB
++ First Load JS shared by all             101 kB
+  ├ chunks/2403-d13a9225679085f1.js      46.2 kB
+  ├ chunks/5b56a498-0fe49f66bdbf8d9d.js  53.2 kB
+  └ other shared chunks (total)             2 kB
+
+
+ƒ Middleware                              154 kB
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+
