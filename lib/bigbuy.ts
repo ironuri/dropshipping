@@ -151,16 +151,21 @@ export async function fetchProductsImages(page: number): Promise<BBProductImages
   );
 }
 
-/** Stock for all products, paginated at 100/page */
+/** Stock for all products, paginated at 100/page. Returns [] if endpoint unavailable. */
 export async function fetchAllStock(): Promise<BBProductStock[]> {
   const results: BBProductStock[] = [];
-  for (let page = 1; page <= 200; page++) {
-    const data = await bbFetch<BBProductStock[]>(
-      `/catalog/productsstockavailable.json?pageSize=${PAGE_SIZE}&page=${page}`
-    );
-    if (!Array.isArray(data) || data.length === 0) break;
-    results.push(...data);
-    if (data.length < PAGE_SIZE) break;
+  try {
+    for (let page = 1; page <= 200; page++) {
+      const data = await bbFetch<BBProductStock[]>(
+        `/catalog/productsstockavailable.json?pageSize=${PAGE_SIZE}&page=${page}`
+      );
+      if (!Array.isArray(data) || data.length === 0) break;
+      results.push(...data);
+      if (data.length < PAGE_SIZE) break;
+    }
+  } catch {
+    // Stock endpoint may be restricted on some BigBuy plans; proceed with stock=0
+    console.warn("[BigBuy] fetchAllStock failed — products will import with stock=0");
   }
   return results;
 }
