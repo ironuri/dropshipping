@@ -151,11 +151,18 @@ export async function fetchProductsImages(page: number): Promise<BBProductImages
   );
 }
 
-/** Stock for ALL products in one call (BigBuy supports high pageSize here) */
+/** Stock for all products, paginated at 100/page */
 export async function fetchAllStock(): Promise<BBProductStock[]> {
-  return bbFetch<BBProductStock[]>(
-    `/catalog/productsstockavailable.json?isoCode=ES&pageSize=5000`
-  );
+  const results: BBProductStock[] = [];
+  for (let page = 1; page <= 200; page++) {
+    const data = await bbFetch<BBProductStock[]>(
+      `/catalog/productsstockavailable.json?isoCode=ES&pageSize=${PAGE_SIZE}&page=${page}`
+    );
+    if (!Array.isArray(data) || data.length === 0) break;
+    results.push(...data);
+    if (data.length < PAGE_SIZE) break;
+  }
+  return results;
 }
 
 /** Product → category mapping — paginated */
