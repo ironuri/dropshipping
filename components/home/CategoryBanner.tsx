@@ -2,32 +2,32 @@ import Link from "next/link";
 
 const CATEGORIES = [
   {
-    href: "/categorias/solares",
+    href: "/categorias/linea-solar",
     emoji: "☀️",
-    title: "Protección Solar",
-    description: "ISDIN, Heliocare, La Roche-Posay",
+    title: "Línea Solar",
+    description: "ISDIN, Heliocare, La Roche-Posay, Biosolis",
     bg: "bg-amber-50 hover:bg-amber-100",
   },
   {
-    href: "/categorias/eco",
-    emoji: "🌿",
-    title: "Eco & Natural",
-    description: "Biosolis, Florame, Dr. Hauschka",
-    bg: "bg-green-50 hover:bg-green-100",
-  },
-  {
-    href: "/categorias/skincare",
+    href: "/categorias/cuidado-facial",
     emoji: "✨",
-    title: "Skincare Premium",
-    description: "Vitamina C, Niacinamida, Ácido Hialurónico",
+    title: "Cuidado Facial",
+    description: "Limpiadores, sérums, cremas, contorno de ojos",
     bg: "bg-purple-50 hover:bg-purple-100",
   },
   {
-    href: "/categorias/kits",
-    emoji: "🎁",
-    title: "Kits & Bundles",
-    description: "Rutinas completas con descuento",
+    href: "/categorias/cuidado-corporal",
+    emoji: "🧴",
+    title: "Cuidado Corporal",
+    description: "Hidratantes, exfoliantes, aceites corporales",
     bg: "bg-rose-50 hover:bg-rose-100",
+  },
+  {
+    href: "/categorias/cosmetica",
+    emoji: "🌿",
+    title: "Cosmética Eco",
+    description: "Florame, Dr. Hauschka, Cattier, Avril",
+    bg: "bg-green-50 hover:bg-green-100",
   },
 ];
 

@@ -17,10 +17,10 @@ export function Hero() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
             <Button size="lg" className="bg-[#D4A853] hover:bg-[#C4953D] text-[#1A1A1A] font-semibold" asChild>
-              <Link href="/categorias/solares">Ver solares</Link>
+              <Link href="/categorias/linea-solar">Ver línea solar</Link>
             </Button>
             <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10" asChild>
-              <Link href="/categorias/skincare">Ver skincare</Link>
+              <Link href="/categorias/cuidado-facial">Ver cuidado facial</Link>
             </Button>
           </div>
           <div className="mt-10 flex flex-wrap items-center justify-center md:justify-start gap-6 text-sm text-white/70">

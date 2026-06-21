@@ -10,10 +10,10 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 
 const NAV_LINKS = [
-  { href: "/categorias/solares", label: "Solares" },
-  { href: "/categorias/skincare", label: "Skincare" },
-  { href: "/categorias/eco", label: "Eco & Bio" },
-  { href: "/categorias/kits", label: "Kits & Bundles" },
+  { href: "/categorias/linea-solar", label: "Línea Solar" },
+  { href: "/categorias/cuidado-facial", label: "Cuidado Facial" },
+  { href: "/categorias/cuidado-corporal", label: "Cuidado Corporal" },
+  { href: "/categorias/cosmetica", label: "Cosmética" },
 ];
 
 export function Header() {

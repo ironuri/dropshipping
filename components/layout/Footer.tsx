@@ -12,10 +12,10 @@ const TRUST_BADGES = [
 const FOOTER_LINKS = {
   tienda: [
     { href: "/productos", label: "Todos los productos" },
-    { href: "/categorias/solares", label: "Protección solar" },
-    { href: "/categorias/skincare", label: "Skincare" },
-    { href: "/categorias/eco", label: "Eco & Natural" },
-    { href: "/categorias/kits", label: "Kits y bundles" },
+    { href: "/categorias/linea-solar", label: "Línea Solar" },
+    { href: "/categorias/cuidado-facial", label: "Cuidado Facial" },
+    { href: "/categorias/cuidado-corporal", label: "Cuidado Corporal" },
+    { href: "/categorias/cosmetica", label: "Cosmética" },
   ],
   ayuda: [
     { href: "/envios", label: "Envíos y entregas" },
