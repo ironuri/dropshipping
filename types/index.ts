@@ -1,4 +1,4 @@
-export type Supplier = "BIGBUY" | "DIETISUR";
+export type Supplier = "BTSWHOLESALER";
 export type OrderStatus =
   | "PENDING"
   | "CONFIRMED"

@@ -139,18 +139,16 @@ export function FilterSidebar({ filters, onFiltersChange, brands, maxPrice }: Pr
       <section className="mb-6">
         <p className="text-sm font-medium mb-3">Proveedor</p>
         <div className="space-y-2">
-          {(["BIGBUY", "DIETISUR"] as const).map((s) => (
-            <div key={s} className="flex items-center gap-2">
-              <Checkbox
-                id={s}
-                checked={filters.supplier === s}
-                onCheckedChange={(c) => toggle("supplier", c ? s : undefined)}
-              />
-              <Label htmlFor={s} className="text-sm cursor-pointer">
-                {s === "BIGBUY" ? "Farmacia Premium" : "Eco & Natural"}
-              </Label>
-            </div>
-          ))}
+          <div className="flex items-center gap-2">
+            <Checkbox
+              id="BTSWHOLESALER"
+              checked={filters.supplier === "BTSWHOLESALER"}
+              onCheckedChange={(c) => toggle("supplier", c ? "BTSWHOLESALER" : undefined)}
+            />
+            <Label htmlFor="BTSWHOLESALER" className="text-sm cursor-pointer">
+              BTSWholesaler
+            </Label>
+          </div>
         </div>
       </section>
 

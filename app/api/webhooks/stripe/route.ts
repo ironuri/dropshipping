@@ -100,7 +100,7 @@ async function handleCheckoutCompleted(session: Stripe.Checkout.Session) {
       const supplierOrder = await db.supplierOrder.create({
         data: {
           orderId: order.id,
-          supplier: supplier as "BIGBUY" | "DIETISUR",
+          supplier: supplier as "BTSWHOLESALER",
           status: "PENDING",
         },
       });
@@ -109,7 +109,7 @@ async function handleCheckoutCompleted(session: Stripe.Checkout.Session) {
       await db.orderItem.updateMany({
         where: {
           orderId: order.id,
-          product: { supplier: supplier as "BIGBUY" | "DIETISUR" },
+          product: { supplier: supplier as "BTSWHOLESALER" },
         },
         data: { supplierOrderId: supplierOrder.id },
       });

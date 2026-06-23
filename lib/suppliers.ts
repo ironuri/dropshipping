@@ -1,10 +1,8 @@
-import { bigbuyAdapter } from "./bigbuy";
-import { dietisurAdapter } from "./dietisur";
+import { btswholesalerAdapter } from "./btswholesaler";
 import type { SupplierAdapter } from "@/types";
 
 export const suppliers: Record<string, SupplierAdapter> = {
-  BIGBUY: bigbuyAdapter,
-  DIETISUR: dietisurAdapter,
+  BTSWHOLESALER: btswholesalerAdapter,
 };
 
 export function getSupplierAdapter(supplier: string): SupplierAdapter {

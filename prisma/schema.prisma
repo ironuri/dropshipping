@@ -9,8 +9,7 @@ datasource db {
 }
 
 enum Supplier {
-  BIGBUY
-  DIETISUR
+  BTSWHOLESALER
 }
 
 enum OrderStatus {

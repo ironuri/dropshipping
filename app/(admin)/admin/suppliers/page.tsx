@@ -8,31 +8,19 @@ export const metadata: Metadata = { title: "Proveedores | Admin" };
 export const dynamic = "force-dynamic";
 
 export default async function AdminSuppliersPage() {
-  const [bigbuyCount, dietisurCount] = await Promise.all([
-    db.product.count({ where: { supplier: "BIGBUY", active: true } }),
-    db.product.count({ where: { supplier: "DIETISUR", active: true } }),
-  ]);
+  const btsCount = await db.product.count({ where: { supplier: "BTSWHOLESALER", active: true } });
 
   const suppliers = [
     {
-      id: "BIGBUY",
-      name: "BigBuy",
-      description: "Marketplace europeo con +200.000 productos de farmacia y cosmética premium.",
-      products: bigbuyCount,
+      id: "BTSWHOLESALER",
+      name: "BTSWholesaler",
+      description: "Mayorista europeo especializado en cosmética, perfumería y cuidado personal. +48.000 productos, envío desde España.",
+      products: btsCount,
       status: "active",
-      syncSchedule: "Cada 6 horas",
-      website: "https://bigbuy.eu",
-      orderMethod: "API REST",
-    },
-    {
-      id: "DIETISUR",
-      name: "DietiSur",
-      description: "Especialista en cosmética eco y natural. Catálogo de marcas como Biosolis, Florame y Dr. Hauschka.",
-      products: dietisurCount,
-      status: "active",
-      syncSchedule: "Cada hora (CSV)",
-      website: "https://dietisur.es",
-      orderMethod: "Email automático",
+      syncSchedule: "Diaria (06:00 UTC)",
+      website: "https://www.btswholesaler.com",
+      orderMethod: "API REST v2.0",
+      emoji: "🧴",
     },
   ];
 
@@ -45,32 +33,31 @@ export default async function AdminSuppliersPage() {
             <div className="flex items-start justify-between mb-4">
               <div>
                 <h2 className="font-bold text-lg">{s.name}</h2>
-                <Badge variant={s.status === "active" ? "eco" : "secondary"} className="mt-1">
-                  {s.status === "active" ? "Activo" : "Inactivo"}
-                </Badge>
+                <Badge variant="eco" className="mt-1">Activo</Badge>
               </div>
-              <span className="text-3xl">{s.id === "BIGBUY" ? "🏭" : "🌿"}</span>
+              <span className="text-3xl">{s.emoji}</span>
             </div>
             <p className="text-sm text-muted-foreground mb-4">{s.description}</p>
             <div className="space-y-2 text-sm mb-4">
-              <div className="flex justify-between"><span className="text-muted-foreground">Productos activos</span><span className="font-medium">{s.products}</span></div>
-              <div className="flex justify-between"><span className="text-muted-foreground">Sincronización</span><span className="font-medium">{s.syncSchedule}</span></div>
-              <div className="flex justify-between"><span className="text-muted-foreground">Pedidos</span><span className="font-medium">{s.orderMethod}</span></div>
+              <div className="flex justify-between">
+                <span className="text-muted-foreground">Productos activos</span>
+                <span className="font-medium">{s.products}</span>
+              </div>
+              <div className="flex justify-between">
+                <span className="text-muted-foreground">Sincronización</span>
+                <span className="font-medium">{s.syncSchedule}</span>
+              </div>
+              <div className="flex justify-between">
+                <span className="text-muted-foreground">Pedidos</span>
+                <span className="font-medium">{s.orderMethod}</span>
+              </div>
             </div>
             <div className="flex gap-2">
-              <Button
-                variant="outline"
-                size="sm"
-                asChild
-              >
-                <Link href={`/api/sync/${s.id.toLowerCase()}`}>
-                  Sincronizar ahora
-                </Link>
+              <Button variant="outline" size="sm" asChild>
+                <Link href="/admin/sync">Sincronizar ahora</Link>
               </Button>
               <Button variant="ghost" size="sm" asChild>
-                <a href={s.website} target="_blank" rel="noopener noreferrer">
-                  Ver sitio ↗
-                </a>
+                <a href={s.website} target="_blank" rel="noopener noreferrer">Ver sitio ↗</a>
               </Button>
             </div>
           </div>
@@ -78,12 +65,13 @@ export default async function AdminSuppliersPage() {
       </div>
 
       <div className="mt-8 bg-[#F5F0E8] rounded-xl p-6">
-        <h2 className="font-semibold mb-3">⚙️ Configuración de sincronización</h2>
-        <p className="text-sm text-muted-foreground">
-          Las sincronizaciones automáticas están configuradas mediante Vercel Cron Jobs.
-          BigBuy se sincroniza cada 6 horas. DietiSur (CSV) se sincroniza cada hora.
-          Para forzar una sincronización manual, usa los botones de arriba (requiere header <code>Authorization: Bearer CRON_SECRET</code>).
-        </p>
+        <h2 className="font-semibold mb-3">⚙️ Variables de entorno necesarias</h2>
+        <div className="space-y-1 text-sm font-mono text-muted-foreground">
+          <p><span className="text-[#2D5016] font-semibold">BTS_API_URL</span> — URL base de la API (desde tu dashboard BTSWholesaler)</p>
+          <p><span className="text-[#2D5016] font-semibold">BTS_API_TOKEN</span> — JWT token de autenticación</p>
+          <p><span className="text-[#2D5016] font-semibold">BTS_MARKUP_FACTOR</span> — Factor de margen (por defecto 1.8 = 80% margen)</p>
+          <p><span className="text-[#2D5016] font-semibold">CRON_SECRET</span> — Secreto para el cron de sincronización automática</p>
+        </div>
       </div>
     </div>
   );

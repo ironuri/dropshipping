@@ -15,7 +15,7 @@ export default async function AdminProductsPage({
   const params = await searchParams;
   const page = parseInt(params.page || "1");
   const search = params.q || "";
-  const supplier = params.supplier as "BIGBUY" | "DIETISUR" | undefined;
+  const supplier = params.supplier as "BTSWHOLESALER" | undefined;
 
   const where = {
     ...(search && {
@@ -55,8 +55,7 @@ export default async function AdminProductsPage({
         />
         <select name="supplier" defaultValue={supplier || ""} className="h-10 px-3 rounded-md border border-input bg-background text-sm">
           <option value="">Todos los proveedores</option>
-          <option value="BIGBUY">BigBuy</option>
-          <option value="DIETISUR">DietiSur</option>
+          <option value="BTSWHOLESALER">BTSWholesaler</option>
         </select>
         <button type="submit" className="h-10 px-4 bg-primary text-primary-foreground rounded-md text-sm font-medium">
           Buscar
@@ -94,7 +93,7 @@ export default async function AdminProductsPage({
                 </td>
                 <td className="px-4 py-3 font-mono text-xs">{p.sku}</td>
                 <td className="px-4 py-3">
-                  <Badge variant={p.supplier === "BIGBUY" ? "default" : "eco"} className="text-xs">
+                  <Badge variant="default" className="text-xs">
                     {p.supplier}
                   </Badge>
                 </td>
